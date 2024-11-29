@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Feedback Form!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+        }
+        .rating {
+            display: flex;
+            justify-content: space-between;
+        }
+        .rating input {
+            margin-right: 10px;
+        }
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            height: 100px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Survey Feedback Form</h1>
+    
+    <div class="form-container">
+        <form action="/submit-feedback" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Mobile">Mobile:</label>
+                <input type="Mobile" id="Mobile" name="Mobile" placeholder="Enter your mobile" required>
+            </div>
+
+            <div class="form-group">
+                <label for="Age">Age:</label>
+                <input type="Age" id="Age" name="Age" placeholder="Enter your age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="DOB">DOB:</label>
+                <input type="DOB" id="DOB" name="DOB" placeholder="Enter your DOB" required>
+            </div>
+
+            <div class="form-group">
+                <label>How would you rate the overall experience?</label>
+                <div class="rating">
+                    <label>
+                        <input type="radio" name="experience" value="1"> 1
+                    </label>
+                    <label>
+                        <input type="radio" name="experience" value="2"> 2
+                    </label>
+                    <label>
+                        <input type="radio" name="experience" value="3"> 3
+                    </label>
+                    <label>
+                        <input type="radio" name="experience" value="4"> 4
+                    </label>
+                    <label>
+                        <input type="radio" name="experience" value="5"> 5
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="improvement">What can we do to improve?</label>
+                <textarea id="improvement" name="improvement" placeholder="Enter your suggestions" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="recommendation">Would you recommend our service to others?</label><br>
+                <label>
+                    <input type="radio" name="recommendation" value="Yes" required> Yes
+                </label>
+                <label>
+                    <input type="radio" name="recommendation" value="No" required> No
+                </label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit Feedback</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

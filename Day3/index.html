@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent {
+            background-color: aliceblue;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .childone {
+            transition: all 0.3s ease;
+        }
+        .childone:hover {
+            height: 400px;
+            width: 500px;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+        .childtwo {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+        .childtwo:hover {
+            height: 220px;
+            width: 320px;
+        }
+        .childtwo img {
+            height: 100px;
+            width: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .childtwo img:hover {
+            transform: scale(1.2);
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            
+        </div>
+        <div class="menus">
+            <ul>
+                <li><a href=""target="_blank">Home</a></li>
+                <li><a href=""target="_blank">Activity</a></li>
+                <li><a href=""target="_blank">Details</a></li>
+                <li><a href=""target="_blank">System</a></li>
+                <li><a href=""target="_blank">The Ved</a></li>
+                <li><a href=""target="_blank">Contact Us</a></li>
+                <li><a href=""target="_blank">More Info</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+                                            
+    <div class="parent">
+        <div class="childone">
+            <h1 class="heading">The Ramayana!</h1>
+            <p class="para">The Ramayana is an all-popular epic in South and Southeast Asia. It is the story of King Rama who must save his kidnapped wife, Sita. Along the way, it teaches Hindu life lessons. The Ramayana is told and retold orally, through literature (and comic books!), plays, movies and is referenced in many other forms of popular culture today. The Ramayana by the sage Valmiki is one of the great epics of the Sanskrit language, and is dated to approximately 200 B.C.E. There are many other versions of the epic in the many regional languages found in South Asia. Although the same core narrative is used (or referred to) in most of these versions, there are significant differences among them. This is particularly true regarding how the story ends. The basic storyline is provided here, but teachers and students should expect to see great variation and greater detail with reference to each episode.</p>
+        </div>
+        <div class="childtwo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Sita_in_exile.jpg" alt="Ram">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Sita_in_exile.jpg" alt="Sita">
+        </div>
+    </div>
+</body>
+</html>
