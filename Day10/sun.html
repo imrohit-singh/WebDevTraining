@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunlight Effects</title>
+    <style>
+        #box, .sunTwo {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+            margin: 40px;
+            display: inline-flex;
+            border-radius: 50%;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 40px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div id="box" draggable="true"></div>
+        <div class="sunTwo"></div>
+    </div>
+    <button>Click here!</button>
+
+    <script>
+        const sunLight = () => {
+            const sun = document.getElementById('box');
+            const sunTwo = document.getElementsByClassName('sunTwo')[0];
+
+            sun.addEventListener("mouseenter", () => {
+                sun.style.boxShadow = "10px 10px 100px 10px yellow";
+                sun.style.backgroundColor = "yellow";
+            });
+
+            sun.addEventListener("mouseleave", () => {
+                sun.style.boxShadow = "10px 10px 100px 10px gray";
+                sun.style.backgroundColor = "gray";
+            });
+
+            sunTwo.addEventListener("dragenter", () => {
+                sunTwo.style.boxShadow = "10px 10px 100px 10px yellow";
+                sunTwo.style.backgroundColor = "red";
+            });
+
+            sunTwo.addEventListener("mouseleave", () => {
+                sunTwo.style.boxShadow = "10px 10px 100px 10px gray";
+                sunTwo.style.backgroundColor = "gray";
+            });
+        };
+
+        sunLight();
+    </script>
+</body>
+</html>
